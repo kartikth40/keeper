@@ -1,0 +1,147 @@
+body {
+  background-color: #343434;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: yellow;
+  color: #343434;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px rgb(133, 133, 255);
+}
+.note-input {
+  position: relative;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-title,
+.input-content {
+  border: 1px rgb(133, 133, 255) solid;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
+textarea {
+  resize: none;
+}
+.input-title {
+  border-radius: 5px 5px 0 0;
+  height: 2rem;
+  width: 50vw;
+}
+.input-content {
+  border-radius: 0 0 5px 5px;
+  height: 3rem;
+  width: 50vw;
+}
+.add-btn {
+  position: absolute;
+  bottom: 0;
+  background-color: yellow;
+  transform: translateY(50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+.add-btn:active {
+  transform: translateY(50%) scale(0.9);
+}
+.add-btn::after,
+.add-btn::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+}
+.add-btn::before {
+  top: 50%;
+  height: 2px;
+  left: 6px;
+  right: 6px;
+  transform: translateY(-50%);
+}
+.add-btn::after {
+  left: 50%;
+  width: 2px;
+  top: 6px;
+  bottom: 6px;
+  transform: translateX(-50%);
+}
+.note-container {
+  height: 180vh;
+  margin: 4rem 0;
+}
+.note {
+  position: relative;
+  max-width: 300px;
+  overflow-wrap: break-word;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: rgb(100, 100, 100);
+  display: inline-block;
+  margin: 1rem;
+  box-shadow: 0 0 5px rgb(32, 32, 32);
+}
+.note-heading {
+  font-size: 1rem;
+}
+.note-content {
+  font-size: 0.8rem;
+}
+.delete-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: rgb(255, 107, 107);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  opacity: 0.5;
+}
+.delete-btn:hover {
+  opacity: 1;
+}
+.delete-btn::after,
+.delete-btn::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+}
+.delete-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.delete-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+footer {
+  background-color: rgba(100, 100, 100, 0.726);
+  color: white;
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  bottom: 0;
+  text-align: center;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.164);
+}
